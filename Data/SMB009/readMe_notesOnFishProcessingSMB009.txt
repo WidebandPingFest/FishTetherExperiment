@@ -1,0 +1,1 @@
+120kHz transducer was pinging in CW instead of FM. No frequency response curve created for 120 channel
