@@ -37,3 +37,36 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Image files
+*.jpg
+*.png
+
+# Acoustic Data file types
+*.bot
+*.raw
+*.idx
+*.evi
+*.evwx
+*.evb
+*.dt4
+*.rtp
+*.rtpx
+*.dg
+*.EV
+
+# Ignore Misc folder
+Misc/
+
+# Ignore html outputs
+*.html
+
+# Ignores large files
+ProcessedData/
+
+# Shiny rsconnect files
+ExploratoryAnalysis/FishTrack-EDA-Tool/rsconnect
+
+# Ignore Apple specific files
+*.icloud
+*.DS_Store
