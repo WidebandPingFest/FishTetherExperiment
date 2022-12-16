@@ -63,6 +63,7 @@ Misc/
 
 # Ignores large files
 ProcessedData/
+ExploratoryAnalysis/FishTrack-EDA-Tool/processed_data.Rdata
 
 # Shiny rsconnect files
 ExploratoryAnalysis/FishTrack-EDA-Tool/rsconnect
