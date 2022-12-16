@@ -1,0 +1,121 @@
+---
+title: "TS compensation across frequency"
+author: "Jeremy Holden"
+date: "2022-12-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(dplyr)
+source("E:/Projects/FishTetherExperiment/Analysis_Scripts/custom_functions.R", echo=F)
+library(ggplot2)
+```
+
+## LT016
+```{r, include=FALSE}
+comp <- read_comp_freq_response("LT016")
+uncomp <- read_uncomp_freq_response("LT016")
+tsdiff <- inner_join(comp, uncomp)
+
+# can we work in dB domain?
+tsdiff <- tsdiff %>% 
+  mutate(TSdifference = TS - uncompTS)
+
+tsdiff <- tsdiff[sample(1:nrow(tsdiff), 10000),]
+```
+
+
+```{r}
+ggplot(tsdiff, aes(Frequency, TSdifference)) + geom_point(alpha=0.01)
+```
+
+## LT015
+```{r, include=FALSE}
+comp <- read_comp_freq_response("LT015")
+uncomp <- read_uncomp_freq_response("LT015")
+tsdiff <- inner_join(comp, uncomp)
+
+# can we work in dB domain?
+tsdiff <- tsdiff %>% 
+  mutate(TSdifference = TS - uncompTS)
+
+if(nrow(tsdiff)>10000) {tsdiff <- tsdiff[sample(1:nrow(tsdiff), 10000),]}
+```
+
+
+```{r}
+ggplot(tsdiff, aes(Frequency, TSdifference)) + geom_point(alpha=0.01)
+```
+
+## LWF007
+```{r, include=FALSE}
+comp <- read_comp_freq_response("LWF007")
+uncomp <- read_uncomp_freq_response("LWF007")
+tsdiff <- inner_join(comp, uncomp)
+
+# can we work in dB domain?
+tsdiff <- tsdiff %>% 
+  mutate(TSdifference = TS - uncompTS)
+
+if(nrow(tsdiff)>10000) {tsdiff <- tsdiff[sample(1:nrow(tsdiff), 10000),]}
+```
+
+
+```{r}
+ggplot(tsdiff, aes(Frequency, TSdifference)) + geom_point(alpha=0.01)
+```
+
+## LWF010
+```{r, include=FALSE}
+comp <- read_comp_freq_response("LWF010")
+uncomp <- read_uncomp_freq_response("LWF010")
+tsdiff <- inner_join(comp, uncomp)
+
+# can we work in dB domain?
+tsdiff <- tsdiff %>% 
+  mutate(TSdifference = TS - uncompTS)
+
+if(nrow(tsdiff)>10000) {tsdiff <- tsdiff[sample(1:nrow(tsdiff), 10000),]}
+```
+
+
+```{r}
+ggplot(tsdiff, aes(Frequency, TSdifference)) + geom_point(alpha=0.01)
+```
+
+## SMB005
+```{r, include=FALSE}
+comp <- read_comp_freq_response("SMB005")
+uncomp <- read_uncomp_freq_response("SMB005")
+tsdiff <- inner_join(comp, uncomp)
+
+# can we work in dB domain?
+tsdiff <- tsdiff %>% 
+  mutate(TSdifference = TS - uncompTS)
+
+if(nrow(tsdiff)>10000) {tsdiff <- tsdiff[sample(1:nrow(tsdiff), 10000),]}
+```
+
+
+```{r}
+ggplot(tsdiff, aes(Frequency, TSdifference)) + geom_point(alpha=0.01)
+```
+
+## SMB006
+```{r, include=FALSE}
+comp <- read_comp_freq_response("SMB006")
+uncomp <- read_uncomp_freq_response("SMB006")
+tsdiff <- inner_join(comp, uncomp)
+
+# can we work in dB domain?
+tsdiff <- tsdiff %>% 
+  mutate(TSdifference = TS - uncompTS)
+
+if(nrow(tsdiff)>10000) {tsdiff <- tsdiff[sample(1:nrow(tsdiff), 10000),]}
+```
+
+
+```{r}
+ggplot(tsdiff, aes(Frequency, TSdifference)) + geom_point(alpha=0.01)
+```
