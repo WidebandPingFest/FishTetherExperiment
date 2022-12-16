@@ -62,7 +62,8 @@ Misc/
 *.html
 
 # Ignores large files
-ProcessedData/
+ProcessedData/*.csv
+ProcessedData/*.Rdata
 ExploratoryAnalysis/FishTrack-EDA-Tool/processed_data.Rdata
 
 # Shiny rsconnect files
