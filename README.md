@@ -36,4 +36,6 @@ source('Analysis_Scripts/read_tidy_export_EVfiles.R')
 if(file.exists('ProcessedData/processed_AllFishCombined_unfiltered.csv'){
   source('ExploratoryAnalysis/generating_filtered_compensated_targets.R')
 }
+
+file.exists("ProcessedData/processed_AnalysisData.csv") # expect TRUE if model data has been created
 ```
