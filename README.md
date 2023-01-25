@@ -25,7 +25,7 @@ In the future these files may be included in the repo using Git Large File Stora
 
 ## Creating the model data
 1. Data has been processed in Echoview (v. 13) and exported as csv files. The raw acoustic exports are located in [Data](Data) with each fish having it's own folder.  
-2. The exported acoustic data is compiled to a master data set using [Analysis_Scripts/read_tidy_export_EVfiles.R](Analysis_Scripts/read_tidy_export_EVfiles.R). This script will import and format each fish's exported data and then compile a large dataframe *ProcessedData/processed_AllFishCombined_unfiltered.csv*.  
+2. On your local system, the exported acoustic data is compiled to a master data set using [Analysis_Scripts/read_tidy_export_EVfiles.R](Analysis_Scripts/read_tidy_export_EVfiles.R). This script will import and format each fish's exported data and then compile a large dataframe *ProcessedData/processed_AllFishCombined_unfiltered.csv*.  
 3. A preliminary filtering of the data to remove values that had large TS compensation applied. This analysis [ExploratoryAnalysis/generating_filtered_compensated_targets.R](ExploratoryAnalysis/generating_filtered_compensated_targets.R)) provides a list of single target detections that have <6 dB compensation that is used to filter the dataset for analysis. The filtered file is *ProcessedData/processed_AnalysisData.csv*.  
 
 ``` r
