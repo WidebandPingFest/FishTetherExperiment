@@ -28,8 +28,11 @@ In the future these files may be included in the repo using Git Large File Stora
 2. On your local system, the exported acoustic data is compiled to a master data set using [Analysis_Scripts/read_tidy_export_EVfiles.R](Analysis_Scripts/read_tidy_export_EVfiles.R). This script will import and format each fish's exported data and then compile a large dataframe *ProcessedData/processed_AllFishCombined_unfiltered.csv*.  
 3. A preliminary filtering of the data to remove values that had large TS compensation applied. This analysis [ExploratoryAnalysis/generating_filtered_compensated_targets.R](ExploratoryAnalysis/generating_filtered_compensated_targets.R)) provides a list of single target detections that have <6 dB compensation that is used to filter the dataset for analysis. The filtered file is *ProcessedData/processed_AnalysisData.csv*.  
 
-``` r
+### In R
+``` {r}
+# compile unfiltered data
 source('Analysis_Scripts/read_tidy_export_EVfiles.R')
+# apply 6dB filter (only if above file was successfully created)
 if(file.exists('ProcessedData/processed_AllFishCombined_unfiltered.csv'){
   source('ExploratoryAnalysis/generating_filtered_compensated_targets.R')
 }
