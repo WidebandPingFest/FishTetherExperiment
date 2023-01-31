@@ -1,0 +1,34 @@
+fishNum,goProStartTime,pingStartTime,lat,long,observationsWhilePinging,pingEndTime,observationsAfterPinging,activityScore
+LT009,,,,,starting pulse rate of 100ms; fish quite lively,,,5
+LT011,,,,,was all good,,,5
+LT012,9:31,9:33,45.678993,-78.370154,Active fish. Swimming at about 12-15m.,10:04,Looked good,5
+LT013,11:50,11:52,45.678869,-78.369466,Was pale as when tethered. Some movement at 10 min mark. Seems pretty flat when in the beam.,12:23,Fish looks like a mort on retrieval,2
+LT014,12:26,12:29,45.681178,-78.367078,10/10 condition on attachment. Initial pings look good. Had to move boat a few times as we drifted on to the shoal.,13:00,Happy upon return to the surface.,5
+LT015,14:44,14:47,45.67868,-78.368308,Looked a bit rough on attachment,15:17,Fish was lively when returned to the surface.,3
+LT016,15:25,15:27,45.682264,-78.365316,Lively when attached,16:10,Still has kick at retrieval,5
+LT017,9:38,9:42,45.679576,-78.369966,,10:15,Alive and decent. 6/10 condition,4
+LT018,10:19,10:21,45.682927,-78.369421,Fish was in pen over night. Alive but a bit weak when tethered,10:52,"Good colour, active, 7/10",4
+LT019,11:45,11:47,45.687281,-78.362845,This fish is not in very good condition. Not likely to be alive in the beam,12:17,No improvement in condition. Pale and pretty dead.,2
+LT020,13:25,13:30,,,,14:00,Color is good. 7 out of ten for activity,5
+LT021,17:47,17:51,45.681457,-78.373983,,18:20,Activity ten out of ten Colour grey,4
+LWF002,,,,,was struggling but alive upon reaching surface. Multiple other single targets were through the beam while tethered fish was ensonified. Attempt to pull fish up ~2m near end of file,,,3
+LWF003,,,,,was struggling before being put on tether but alive; had another boat sounder on near the 2033-2043 time period,,,3
+LWF007,,,,,went down positively bouyant but still had tail kick,,,2
+LWF009,10:09,10:13,45.683649,-78.370125,"Started pinging with fish too shallow.
+Seeing a second echo from cannon ball
+Fish seems pretty still in the later part of the echogram",10:46,Alive but poor condition,3
+LWF010,10:50,10:53,45.686736,-78.370179,This might be the happiest lwf that has been pinged. Looked active for most of the echogram,11:23,Still feisty upon retrival,4
+LWF011,19:46,19:54,45.681001,-78.366411,Dak left his sounder on at 8:11,20:16,Pretty good condition upon surfacing,4
+LWF012,20:22,20:22,45.685266,-78.365597,Our fish was joined by other fish at 20:35,20:52,Quite happy on exit,5
+LWF013,20:56,20:58,45.686691,-78.365457,Moved cannon ball to 20m to avoid non-tethered targets,21:24,Came up kicking,5
+LWF014,21:27,21:28,45.687998,-78.363792,Was kicking as it went in. 6/10 condition,21:54,Spung tether line around main line. Fish returned happy and kicking.,5
+LWF015,10:57,11:00,45.686348,-78.365801,Pretty active on attach.  Hard to keep this fish in the beam.,11:39,Looks good. 7/10,4
+SMB004,,,,,came up pretty lethargic,,,3
+SMB006,19:08,19:11,45.67739,-78.367711,Looked good,19:42,Looked fine,5
+SMB007,12:21,12:24,45.687307,-78.361025,,12:56,8/10 condition.,5
+SMB008,14:08,14:12,,,,14:44,Activity six out of ten,4
+SMB009,14:54,14:58,,,"First ten minutes not good data, transducer tilted backwards",15:25,"Good colour 7/10 activity, had shitty pings on the fish for the most part",4
+SMB010,18:26,18:30,45.680786,-78.371649,GoPro started 1m 39s earlier,19:01,5 out ten,3
+SMB011,19:06,19:10,45.681986,-78.371061,,19:40,Good colour 7 out of ten,4
+SMB012,19:44,19:48,45.68329,-78.367717,,20:18,7 out of ten activity,4
+SMB013,20:25,20:29,45.685166,-78.367531,100% dead,20:56,As dead as before,1
