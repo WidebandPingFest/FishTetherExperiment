@@ -10,7 +10,7 @@ Folder | Description
 [Data](Data) | contains the raw acoustic data and Echoview processing scripts
 [ExploratoryAnalysis](ExploratoryAnalysis) | contains code to explore and filter the data
 [ExploratoryAnalysis/FishTrack-EDA-Tool](ExploratoryAnalysis/FishTrack-EDA-Tool) | home folder for shiny app
-[Processed_Data](Processed_Data) | contains data that has been generated from data in *Data*
+[ProcessedData](ProcessedData) | contains data that has been generated from data in *Data*
 [NonPingData](NonPingData) | contains fish bio data
 Exported_Figures | Figures generated from analysis scripts
 Writing_Sections | Report writing sections
