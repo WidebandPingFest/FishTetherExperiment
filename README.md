@@ -12,8 +12,8 @@ Folder | Description
 [ExploratoryAnalysis/FishTrack-EDA-Tool](ExploratoryAnalysis/FishTrack-EDA-Tool) | home folder for shiny app
 [ProcessedData](ProcessedData) | contains data that has been generated from data in *Data*
 [NonPingData](NonPingData) | contains fish bio data
-Exported_Figures | Figures generated from analysis scripts
-Writing_Sections | Report writing sections
+ExportedFigures | Figures generated from analysis scripts
+WritingSections | Report writing sections
 
 ## FishTrack-EDA-Tool
 A shiny app that provides visual representation of fish tracks within the beam and targets strengths for each quadrat. The app can be viewed at: [FishTrack-EDA-Tool](https://gfs8966.shinyapps.io/FishTrack-EDA-Tool/)
