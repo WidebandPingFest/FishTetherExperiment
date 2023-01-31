@@ -1,7 +1,7 @@
 # Shiny app: Exploratory analysis of single target detection data
 # Jeremy Holden & Alex Ross
 # Dec 5, 2022.
-# Revised Dec 12
+# Revised Dec 12; Updated Jan 30
 
 library(shiny)
 library(dplyr)
@@ -41,7 +41,16 @@ ui <- fluidPage(
         tabPanel("Axis Distances",girafeOutput("distPlot")),
         tabPanel("Axis Angles", girafeOutput("anglePlot")),
         tabPanel("TS distribution", plotOutput("tsHisto")),
-        tabPanel("Aspect Angle", plotOutput("orientDist"))
+        tabPanel("Aspect Angle", plotOutput("orientDist")),
+        tabPanel("All LT Unfiltered", img(
+          src = "LearnPlot_LakeTrout_TSCompensation.png",
+          width = 800)),
+        tabPanel("All LWF Unfiltered", img(
+          src = "LearnPlot_LWF_TSCompensation.png",
+          width = 800)),
+        tabPanel("All SMB Unfiltered", img(
+          src = "LearnPlot_SMB_TSCompensation.png",
+          width = 800))
       )
     )
   ),
