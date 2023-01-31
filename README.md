@@ -12,7 +12,7 @@ Folder | Description
 [ExploratoryAnalysis/FishTrack-EDA-Tool](ExploratoryAnalysis/FishTrack-EDA-Tool) | home folder for shiny app
 [ProcessedData](ProcessedData) | contains data that has been generated from data in *Data*
 [NonPingData](NonPingData) | contains fish bio data
-ExportedFigures | Figures generated from analysis scripts
+[ExportedFigures](ExportedFigures) | Figures generated from analysis scripts
 WritingSections | Report writing sections
 
 ## FishTrack-EDA-Tool
