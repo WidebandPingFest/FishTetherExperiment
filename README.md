@@ -3,6 +3,20 @@
 ## Project Description
 Data and workflow associated with broadband acoustics classification of labelled and tethered fish.
 
+## Clone this repo
+Instructions for installing GIT are here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Create a local copy of the repo by cloning the contents of this repo. 
+From the command line:
+```
+git clone https://github.com/WidebandPingFest/FishTetherExperiment.git
+```
+From within RStudio:
+1. File ->  New Project
+2. From Version Control
+3. From Git
+4. Repository URL = https://github.com/WidebandPingFest/FishTetherExperiment.git
+
 ## Folder Structure
 Folder | Description
 ---------- | --------------------------------------------------
@@ -22,6 +36,47 @@ A shiny app that provides visual representation of fish tracks within the beam a
 The fish track exports used in downstream models are necessarily large files. These files have been added to the [.gitignore](.gitignore) file so as to not exceed storage capacity of the Github repo. Large files need to be created locally using the instructions included below. Any additional large datasets that need to be added to the repo should use the same protocol.
 
 In the future these files may be included in the repo using Git Large File Storage (LFS) protocol.  Details can be found at [Git LFS](https://git-lfs.github.com/). LFS Files can still be read directly from the repo by using the link obtained by viewing *raw* data. A full tutorial on how to use Git LFS is located [HERE](https://github.com/git-lfs/git-lfs/wiki/Tutorial#migrating-existing-repository-data-to-lfs). Prior to cloning the git repository to your local drive, it's necessary to have Git-LFS downloaded on your physical computer. If your local directory is not showing the large files you're looking for, ensuring the LFS software is installed should be your first troubleshooting step. Follow download steps at [Git LFS](https://git-lfs.github.com/).
+
+## Check required R packages are installed
+```
+if(!("dplyr" %in% installed.packages())){
+  install.packages("dplyr")
+} else {cat("dplyr is installed")}
+
+if(!("tidyverse" %in% installed.packages())){
+  install.packages("tidyverse")
+} else {cat("tidyverse is installed")}
+
+if(!("readr" %in% installed.packages())){
+  install.packages("readr")
+} else {cat("readr is installed")}
+
+if(!("tidyr" %in% installed.packages())){
+  install.packages("tidyr")
+} else {cat("tidyr is installed")}
+
+if(!("janitor" %in% installed.packages())){
+  install.packages("janitor")
+} else {cat("janitor is installed")}
+
+# Additional packages for Echoview COM
+if(!("devtools" %in% installed.packages())){
+  install.packages("devtools")
+} else {cat("devtools is installed")}
+
+if(!("here" %in% installed.packages())){
+  install.packages("here")
+} else {cat("here is installed")}
+
+if(!("RDCOMClient" %in% installed.packages())){
+  devtools::install_github("omegahat/RDCOMClient")
+} else {cat("RDCOMClient is installed")}
+
+if(!("EchoviewR" %in% installed.packages())){
+  devtools::install_github('AustralianAntarcticDivision/EchoviewR')
+} else {cat("EchoviewR is installed")}
+
+```
 
 ## Creating the model data
 1. Data has been processed in Echoview (v. 13) and exported as csv files. The raw acoustic exports are located in [Data](Data) with each fish having it's own folder.  
