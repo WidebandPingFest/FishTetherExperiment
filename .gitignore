@@ -65,6 +65,8 @@ Misc/
 ProcessedData/*.csv
 ProcessedData/*.Rdata
 ExploratoryAnalysis/FishTrack-EDA-Tool/processed_data.Rdata
+Calibration/calData_frequencyResponse_*.csv
+
 
 # Shiny rsconnect files
 ExploratoryAnalysis/FishTrack-EDA-Tool/rsconnect
