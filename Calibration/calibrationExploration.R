@@ -160,3 +160,63 @@ freqPlot <- ggplot(freqLong, aes(x=Frequency,y=TS)) +
   geom_point(alpha = 0.02) +
   labs(title = "2022 calibration data")
 freqPlot
+
+## On 2023 38mm tungsten cal data (the previous data might be from 710kHz ducer ball?)
+# Read in frequency response data
+pingindex <- read_csv("Calibration/calData_frequencyResponse_38mmTung_2023.csv", col_names = FALSE, skip = 1, n_max = 1) # Subset rows with ID info (for later joining)
+pingindex <- as.vector(t(pingindex))
+pingindex <- pingindex[!pingindex == "Ping_index"]
+pingindex <- pingindex[!is.na(pingindex)]
+regionname <- read_csv("Calibration/calData_frequencyResponse_38mmTung_2023.csv", col_names = FALSE, skip = 7, n_max = 1) # Subset rows with ID info (for later joining)
+regionname <- as.vector(t(regionname))
+regionname <- regionname[!regionname == "Region_name"]
+regionname <- regionname[!is.na(regionname)]
+regionname <- gsub(pattern = " ", replace = "_", regionname)
+length(pingindex) == length(regionname)
+
+region_index <- paste(regionname, pingindex,seq(1,length(pingindex),1), sep = "_")
+
+fishFreq <- read_csv("Calibration/calData_frequencyResponse_38mmTung_2023.csv", skip = 8, col_names = FALSE) # Need to remove 90kHz to avoid duplicate columns (90 in 120kHz, too)
+names(fishFreq) <- c("Frequency", region_index, "Variable_Index", "Variable_Name")
+fishFreq <- fishFreq %>% select(-Variable_Index, -Variable_Name)
+
+freqLong <- fishFreq %>% pivot_longer(names_to = "fish", -Frequency)
+freqLong <- freqLong %>% rename(TS = value)
+freqLong <- freqLong %>%
+  rename(FishTrack = fish) %>% 
+  filter(TS > -90)
+
+freqPlot <- ggplot(freqLong, aes(x=Frequency,y=TS)) +
+  geom_point(alpha = 0.02) +
+  labs(title = "2023 38mm tungsten calibration data")
+freqPlot
+
+## On 2023 38mm tungsten cal data WITH calibration from ecs applied (the previous data might be from 710kHz ducer ball?)
+# Read in frequency response data
+pingindex <- read_csv("Calibration/calData_frequencyResponse_38mmTung_calApplied_2023.csv", col_names = FALSE, skip = 1, n_max = 1) # Subset rows with ID info (for later joining)
+pingindex <- as.vector(t(pingindex))
+pingindex <- pingindex[!pingindex == "Ping_index"]
+pingindex <- pingindex[!is.na(pingindex)]
+regionname <- read_csv("Calibration/calData_frequencyResponse_38mmTung_calApplied_2023.csv", col_names = FALSE, skip = 7, n_max = 1) # Subset rows with ID info (for later joining)
+regionname <- as.vector(t(regionname))
+regionname <- regionname[!regionname == "Region_name"]
+regionname <- regionname[!is.na(regionname)]
+regionname <- gsub(pattern = " ", replace = "_", regionname)
+length(pingindex) == length(regionname)
+
+region_index <- paste(regionname, pingindex,seq(1,length(pingindex),1), sep = "_")
+
+fishFreq <- read_csv("Calibration/calData_frequencyResponse_38mmTung_calApplied_2023.csv", skip = 8, col_names = FALSE) # Need to remove 90kHz to avoid duplicate columns (90 in 120kHz, too)
+names(fishFreq) <- c("Frequency", region_index, "Variable_Index", "Variable_Name")
+fishFreq <- fishFreq %>% select(-Variable_Index, -Variable_Name)
+
+freqLong <- fishFreq %>% pivot_longer(names_to = "fish", -Frequency)
+freqLong <- freqLong %>% rename(TS = value)
+freqLong <- freqLong %>%
+  rename(FishTrack = fish) %>% 
+  filter(TS > -90)
+
+freqPlot <- ggplot(freqLong, aes(x=Frequency,y=TS)) +
+  geom_point(alpha = 0.02) +
+  labs(title = "2023 38mm tungsten calibration data, w. ecs applied")
+freqPlot
