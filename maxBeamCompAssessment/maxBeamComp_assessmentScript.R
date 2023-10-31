@@ -475,6 +475,17 @@ freqPlot_comp <- ggplot(freqCompData_filtered, aes(x=Frequency,y=TS)) +
   labs(title = "LT011; 6dB ecs, 16dB max comp, 12 db data filter; freq specific comp filter")
 freqPlot_comp
 
+#Only keep observations where every frequency within freq range has an observation
+completeFreqRange <- freqCompData_filtered %>% 
+  group_by(FishTrack) %>% 
+  filter(n_distinct(Frequency) == n_distinct(freqCompData_filtered$Frequency)) %>% 
+  ungroup()
+
+freqPlotComplete_comp <- ggplot(completeFreqRange, aes(x=Frequency,y=TS)) +
+  geom_point(aes(colour=compDif), alpha = 0.02) +
+  scale_color_viridis_c()+
+  labs(title = "LT011; 6dB ecs, 16dB max comp, 12 db data filter; freq specific comp filter; only obs. w. complete freq range")
+freqPlotComplete_comp
 ### What happens when aspect angle is brought in ####
 # LT011, 6db ecs, 16db max comp (STD), 6 db data filter
 # Read in COMPENSATED frequency response data
